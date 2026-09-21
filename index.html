@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Naming Ceremony Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Loading animation -->
+  <div id="loader" class="loader">
+    <div class="loader-cloud"><span></span><span></span><span></span></div>
+    <div class="loader-dots"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <header class="topbar">
+    <nav>
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section home-section">
+      <div class="bunting"></div>
+      <div class="decor decor-left leaf-cluster"></div>
+      <div class="decor decor-right flower flower-big"></div>
+      <div class="decor decor-left-bottom flower flower-small"></div>
+      <div class="decor decor-right-bottom leaf-cluster"></div>
+      <div class="cloud cloud-1"></div><div class="cloud cloud-2"></div><div class="cloud cloud-3"></div>
+      <div class="star star-1">★</div><div class="star star-2">★</div><div class="star star-3">★</div>
+      <div class="sparkles"></div>
+
+      <div class="home-content reveal">
+        <div class="hero-photo scallop large-scallop">
+          <img src="assets/baby.jpg" alt="Baby photo">
+        </div>
+        <div class="hero-copy">
+          <p class="family-name">Komal</p>
+          <h1>Naming Ceremony</h1>
+          <p class="subtitle">of their new born baby</p>
+          <p class="event-date">6th Sept 2026 | 11:45 AM</p>
+          <h2>Hall Complex</h2>
+          <a class="outline-btn" href="https://www.google.com/maps/search/?api=1&query=Hall+Complex+Koramangala+Bengaluru" target="_blank">Open in Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section countdown-section">
+      <div class="sparkles"></div>
+      <div class="countdown reveal">
+        <div class="counter scallop"><strong id="days">00</strong><span>Days</span></div>
+        <div class="counter scallop"><strong id="hours">00</strong><span>Hrs</span></div>
+        <div class="counter scallop"><strong id="minutes">00</strong><span>Mins</span></div>
+        <div class="counter scallop"><strong id="seconds">00</strong><span>Secs</span></div>
+      </div>
+      <div class="countdown-flower flower flower-bottom"></div>
+    </section>
+
+    <!-- WARM INVITE -->
+    <section class="section warm-section">
+      <div class="cloud cloud-1"></div><div class="cloud cloud-2"></div>
+      <div class="warm-card reveal">
+        <div class="inner-border">
+          <p class="script small-title">With hearts overflowing with<br>gratitude and joy, Mr. &amp; Mrs. Nair<br>joyfully invite you to bless our<br>precious little baby.</p>
+          <p class="warm-text">Come, celebrate this beautiful<br>milestone with us, share your<br>love and laughter, and shower<br>our little one with your sweetest<br>wishes and love.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VENUE -->
+    <section class="section venue-section">
+      <div class="sparkles"></div>
+      <div class="venue-decor flower flower-corner"></div>
+      <div class="venue-grid reveal">
+        <div class="venue-copy">
+          <h2 class="script white">Venue</h2>
+          <h3>Hall Complex</h3>
+          <p>Hall Complex, 1st B Cross Road, 7th<br>Block, Koramangala, Bengaluru,<br>Karnataka, India</p>
+          <a class="olive-btn" href="https://www.google.com/maps/search/?api=1&query=Koramangala+Bengaluru" target="_blank">⌖&nbsp; Open In Maps</a>
+        </div>
+        <div class="venue-media">
+          <div class="scallop venue-photo"><img src="assets/venue.jpg" alt="Venue photo"></div>
+          <div class="scallop map-frame"><iframe title="Venue map" src="https://www.google.com/maps?q=Koramangala,Bengaluru&output=embed" loading="lazy"></iframe></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WISHES -->
+    <section class="section wishes-section">
+      <h2 class="section-title script reveal">Wishes for the baby</h2>
+      <div class="wish-carousel reveal">
+        <button class="circle-arrow" id="wishPrev">‹</button>
+        <div class="wish-window">
+          <div class="wish-track" id="wishTrack">
+            <article class="wish-card olive-card"><p>May this precious little one fill your home with joy, laughter and love. Wishing a lifetime of beautiful memories.</p><b>Ananya</b></article>
+            <article class="wish-card maroon-card"><p>May your journey begin with beautiful dreams, endless happiness and a heart filled with love. Warmest wishes.</p><b>Bhuvan</b></article>
+            <article class="wish-card yellow-card"><p>May this little bundle of joy bring sunshine to every day and blessings to the whole family. Lots of love.</p><b>Nikhil</b></article>
+          </div>
+        </div>
+        <button class="circle-arrow" id="wishNext">›</button>
+      </div>
+      <div class="pager"><button id="wishPagePrev">‹</button><span id="wishPage">1 / 3</span><button id="wishPageNext">›</button></div>
+    </section>
+
+    <!-- SEND WISHES -->
+    <section class="section send-section">
+      <div class="flower flower-send-left"></div><div class="flower flower-send-right"></div>
+      <div class="send-grid reveal">
+        <h2 class="script white">Send your wishes</h2>
+        <form id="wishForm" class="wish-form">
+          <label>Your Name<input id="guestName" type="text" required></label>
+          <label>Your Wishes<textarea id="guestWish" rows="5" required></textarea></label>
+          <button type="button" class="ai-btn" id="generateButton">Generate AI wishes</button>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="section schedule-section">
+      <div class="flower schedule-flower-left"></div><div class="flower schedule-flower-right"></div>
+      <h2 class="script white reveal">Schedule</h2>
+      <div class="schedule-wrap reveal">
+        <button class="circle-arrow schedule-arrow" id="schedulePrev">‹</button>
+        <div class="schedule-card scallop">
+          <h3 id="scheduleTitle">Welcome &amp;<br>Gathering</h3>
+          <p id="scheduleTime">10:30 am</p>
+          <small id="schedulePage">1/4</small>
+        </div>
+        <button class="circle-arrow schedule-arrow" id="scheduleNext">›</button>
+      </div>
+    </section>
+
+    <!-- VIDEO / FOOTER PROMO -->
+    <section class="section video-section">
+      <div class="video-card reveal">
+        <div class="video-thumb">
+          <img src="assets/photo3.jpg" alt="Celebration">
+          <button class="play-btn" id="playVideo">▶</button>
+        </div>
+        <div class="video-caption">SMTOWN OFFICIAL</div>
+      </div>
+      <p class="website-credit">Naming ceremony invitation website by <b>INVITATIONNATION</b></p>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section gallery-section">
+      <div class="gallery-leaf left"></div><div class="gallery-leaf right"></div>
+      <h2 class="script reveal">Gallery</h2>
+      <label class="olive-btn upload-btn">Upload<input id="photoUpload" type="file" accept="image/*" multiple hidden></label>
+      <div class="gallery-grid reveal" id="galleryGrid"></div>
+      <div class="gallery-controls"><button id="galleryPrev">←</button><span id="galleryPage">Page 1</span><button id="galleryNext">→</button></div>
+    </section>
+  </main>
+
+  <div class="floating-actions">
+    <a class="float-btn" href="tel:+919999999999" title="Call">☎</a>
+    <button class="float-btn" id="muteButton" title="Music">♪</button>
+  </div>
+
+  <audio id="bgMusic" loop preload="metadata" src="assets/music.mp3"></audio>
+
+  <div id="lightbox" class="lightbox"><button id="closeLightbox">×</button><img id="lightboxImage" alt="Gallery preview"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
